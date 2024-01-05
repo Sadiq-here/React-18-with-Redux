@@ -1,10 +1,23 @@
-import React from 'react';
-import ReactDOM  from 'react-dom/client';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 
-function Greeting(){
-    return <h2>My first Component</h2>;
+function Greeting() {
+  return (
+    <div>
+      <Person />
+      <Message />
+    </div>
+  )
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// we can have as many as nested components we want
+
+const Person = () => <h1>Mohammad Sadiq</h1>
+
+const Message = () => {
+  return <p>Assalaamoalaikum Sadiq</p>
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(<Greeting></Greeting>)
